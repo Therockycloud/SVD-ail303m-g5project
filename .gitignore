@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model artifacts
+*.pkl
+*.npy
+
+# Internal/private working docs (do not submit)
+internal/
+
+# Avoid accidental recommendation dumps in submission folder
+reports/top_recommendations.csv
+
+# Agent Workflows and Rules
+.rule
+.agents/
+agent.md

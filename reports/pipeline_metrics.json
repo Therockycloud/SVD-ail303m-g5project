@@ -1,0 +1,37 @@
+{
+  "generated_at_utc": "2026-03-13T04:54:47.320920+00:00",
+  "dataset": {
+    "ratings_rows": 100836,
+    "train_rows": 80668,
+    "test_rows": 20168,
+    "users_train": 610,
+    "items_train": 8983
+  },
+  "params": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "n_components": 100,
+    "max_iter": 200,
+    "k": 10,
+    "threshold": 3.5
+  },
+  "metrics": {
+    "baseline": {
+      "rmse": 1.0488405992661316,
+      "mae": 0.8315907281547354
+    },
+    "nmf": {
+      "rmse": 1.0365092130886877,
+      "mae": 0.8211592270605116,
+      "precision@10": 0.602295081967213,
+      "recall@10": 0.6446617201478263,
+      "f1@10": 0.6227586760326903,
+      "ndcg@10": 0.8056382708217851,
+      "mrr@10": 0.8627933905802758
+    },
+    "improvement_percent_vs_baseline": {
+      "rmse": 1.1757159463575362,
+      "mae": 1.2544032468196131
+    }
+  }
+}
