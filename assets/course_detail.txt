@@ -1,0 +1,151 @@
+Session	Topic	Learning-Teaching Type	LO	ITU	Student Materials	S-Download	Student's Tasks	URLs
+1	Course Introduction
+1.1. A brief history of modern AI and its Application
+1.1.1. Introduction to AI and Machine Learning	Offline	CLO1	IT	Slide , Videos of Introduction to Artificial Intelligence and Machine Learning	mat1	Read Slide and Watch Video	 
+2	1.1. A brief history of modern AI and its Application
+1.1.2. Modern AI: Applications and Machine Learning Workflow	Offline	CLO1	T	Slide, Videos of Modern AI: Applications and the Machine Learning Workflow	FLM and Coursera	Read Slide and Watch Video	 
+3	1.2. Retrieving and Cleaning data
+1.2.1. Retrieving data
+1.2.2. Cleaning data	Offline	CLO1	T	Slide, Videos of Retrieving Data and Cleaning Data	FLM and Coursera	Read Slide and Watch Video	 
+4	1.3. Exploratory Data Analysis and Feature Engineering
+1.3.1 Exploratory Data Analysis	Offline	CLO2	T	Slide, Videos of Exploratory Data Analysis	FLM and Coursera	Read Slide and Watch Video	 
+5	1.3. Exploratory Data Analysis and Feature Engineering
+1.3.1 Exploratory Data Analysis	Offline	CLO2	T	Slide, Videos of Exploratory Data Analysis	FLM and Coursera	Read Slide and Watch Video	 
+6	1.3. Exploratory Data Analysis and Feature Engineering
+1.3.2 Feature Engineering and Variable
+Transformation	Offline	CLO2	T	Slide, Videos of Feature Engineering and Variable
+Transformation	FLM and Coursera	Read Slide and Watch Video	 
+7	1.3. Exploratory Data Analysis and Feature Engineering
+1.3.2 Feature Engineering and Variable
+Transformation	Offline	CLO2	T	Slide, Videos of Feature Engineering and Variable
+Transformation	FLM and Coursera	Read Slide and Watch Video	 
+8	1.4 Inferential Statistics and Hypothesis Testing
+1.4.1 Estimation and Inference	Offline	CLO3	T	Slide, Videos of Estimation and Inference, and Hypothesis Testing	FLM and Coursera	Read Slide and Watch Video	 
+9	1.4 Inferential Statistics and Hypothesis Testing
+1.4.2 Hypothesis Testing (Homework)
+1.3.3 Demo Lab Feature Engineering	Offline	CLO3	T	Slide, Videos of Hypothesis Testing	FLM and Coursera	Read Slide and Watch Video	 
+10	Progress test 1
+Guiding mini Capstone	Offline	CLO10	U	- Content 1 - 9.
+- Progress test 1.
+- The mini capstone (.docx file)	 	- Review Content 1 - 9
+- Do Progress test 1	 
+11	2.1 Introduction to Supervised Machine Learning and Linear Regression
+2.1.1 Introduction to Supervised Machine Learning
+2.2 Data Splits and Cross Validation
+2.2.1 Training and Test Splits	Offline	CLO4	T	Slide, Videos of Introduction to Supervised Machine Learning
+'Slide, Videos of Training and Test Splits	FLM and Coursera	Read Slide and Watch Video	 
+12	2.2 Data Splits and Cross Validation
+2.2.1 Training and Test Splits	Offline	CLO5	T	Slide, Videos of Training and Test Splits	FLM and Coursera	Read Slide and Watch Video	 
+13	2.2 Data Splits and Cross Validation
+2.2.2 Cross Validation	Offline	CLO5	T	Slide, Videos of Cross Validation	FLM and Coursera	Read Slide and Watch Video	 
+14	2.3 Linear Regression	Offline	CLO4	T	Slide, Videos of Linear Regression	FLM and Coursera	Read Slide and Watch Video	 
+15	2.4 Polynomial Regression
+2.5 Regression with Regularization Techniques
+2.5.1 Regularization Techniques
+Elastic Net, Recursive Feature Elimination (Homework)	Offline	CLO5	T	Slide, Videos of Polynomial Regression
+'Slide, Videos of Regularization Techniques	FLM and Coursera	 	 
+16	2.5 Regression with Regularization Techniques
+2.5.2 Polynomial Features and Regularization Demo	Offline	CLO5	T	Slide, Videos of Regularization Techniques	FLM and Coursera	Read Slide and Watch Video	 
+17	2.5 Regression with Regularization Techniques
+2.5.2 Polynomial Features and Regularization Demo	Offline	CLO5	T	Slide, Videos of Polynomial Features and Regularization Demo	FLM and Coursera	Read Slide and Watch Video	 
+18	2.5 Regression with Regularization Techniques
+2.5.3. Details of Regularization	Offline	CLO5	T	Slide, Videos of Details of Regularization	FLM and Coursera	Read Slide and Watch Video	 
+19	Progress Test 2
+Review Lab 1	Offline	 	U	- Content 11 - 19.
+- Progress test 2
+- Student's lab	 	- Review Content 11 - 19
+- Do Progress test 2	 
+20	Review Lab 1	Offline	 	U	Student's lab	 	Presentation	 
+21	Review the mini Capstone	Offline	CLO10	U	Student's capstone	 	Presentation	 
+22	3.1 Logistic Regression
+3.1.1 Logistic Regression: Introduction to Classification and Error Metrics	Offline	CLO4, CLO5	T	Slide, Videos of Logistic Regression: Introduction to Classification and Error Metrics	FLM and Coursera	Read Slide and Watch Video	 
+23	3.1 Logistic Regression
+3.1.2 Error Metrics
+3.1.3 Logistic Regression Labs	Offline	CLO4, CLO5	T	Slide, Videos of Error Metrics
+'Slide, Videos of Logistic Regression Labs	FLM and Coursera	Read Slide and Watch Video	 
+24	3.1 Logistic Regression
+3.1.2 Logistic Regression Labs	Offline	CLO4, CLO5	T	Slide, Videos of Logistic Regression Labs	FLM and Coursera	Read Slide and Watch Video	 
+25	3.2 K Nearest Neighbors
+3.2.1 K Nearest Neighbors	Offline	CLO4, CLO5	T	Slide, Videos of K Nearest Neighbors	FLM and Coursera	Presentation	 
+26	3.2 K Nearest Neighbors
+3.2.1 K Nearest Neighbors	Offline	CLO4, CLO5	T	Slide, Videos of K Nearest Neighbors	FLM and Coursera	Read Slide and Watch Video	 
+27	3.2 K Nearest Neighbors
+3.2.2 K Nearest Neighbors Labs	Offline	CLO4, CLO5	T	Slide, Videos of K Nearest Neighbors Labs	FLM and Coursera	Read Slide and Watch Video	 
+28	3.2 K Nearest Neighbors
+3.2.2 K Nearest Neighbors Labs	Offline	CLO4, CLO5	T	Slide, Videos of K Nearest Neighbors Labs	FLM and Coursera	Read Slide and Watch Video	 
+29	Review lab 2	Offline	 	U	Student's lab 2	 	Presentation	 
+30	Review the mini Capstone	Offline	CLO10	U	Student's capstone	FLM and Coursera	Presentation	 
+31	3.3 Support Vector Machines
+3.3.1 Support Vector Machines	Offline	CLO4, CLO5	T	Slide, Videos of Support Vector Machines	FLM and Coursera	Read Slide and Watch Video	 
+32	3.3 Support Vector Machines
+3.3.2 Support Vector Machines Kernels	Offline	CLO4, CLO5	T	Slide, Videos of Support Vector Machines Kernels	FLM and Coursera	Read Slide and Watch Video	 
+33	3.3 Support Vector Machines
+3.3.3 Support Vector Machines Labs	Offline	CLO4, CLO5	T	Slide, Videos of Support Vector Machines Labs	FLM and Coursera	Read Slide and Watch Video	 
+34	3.3 Support Vector Machines
+3.3.3 Support Vector Machines Labs	Offline	CLO4, CLO5	T	Slide, Videos of Support Vector Machines Labs	FLM and Coursera	Read Slide and Watch Video	 
+35	3.4 Decision Trees
+3.4.1 Decision Trees	Offline	CLO4, CLO5	T	Slide, Videos of Decision Trees	FLM and Coursera	Read Slide and Watch Video	 
+36	3.4 Decision Trees
+3.4.2 Decision Trees Labs	Offline	CLO4, CLO5	T	Slide, Videos of Decision Trees Labs	FLM and Coursera	Read Slide and Watch Video	 
+37	3.5 Ensemble Models
+3.5.1 Ensemble Based Methods and Bagging	Offline	CLO4, CLO5	T	Slide, Videos of Ensemble Based Methods and Bagging	FLM and Coursera	Read Slide and Watch Video	 
+38	3.5 Ensemble Models
+3.5.1 Ensemble Based Methods and Bagging	Offline	CLO4, CLO5	T	Slide, Videos of Random Forest	FLM and Coursera	Read Slide and Watch Video	 
+39	3.5 Ensemble Models
+3.5.2 Bagging Labs	Offline	CLO4, CLO5	T	Slide, Videos of Bagging Labs	FLM and Coursera	Read Slide and Watch Video	 
+40	3.5 Ensemble Models
+3.5.2 Bagging Labs	Offline	CLO4, CLO5	T	Slide, Videos of Bagging Labs	FLM and Coursera	Read Slide and Watch Video	 
+41	3.5 Ensemble Models
+3.5.3 Boosting and Stacking (Homework for Stacking)	Offline	CLO4, CLO5	T	Slide, Videos of Boosting and Stacking	FLM and Coursera	Read Slide and Watch Video	 
+42	3.5 Ensemble Models
+3.5.4 Boosting and Stacking Labs	Offline	CLO4, CLO5	T	Slide, Videos of Boosting and Stacking Labs	FLM and Coursera	Read Slide and Watch Video	 
+43	3.6 Modeling Unbalanced Classes
+3.6.1 Model Interpretability (Homework)
+3.6.2 Modeling Unbalanced Classes	Offline	CLO4, CLO5	T	Slide, Videos of Model Interpretability	FLM and Coursera	Read Slide and Watch Video	 
+44	3.6 Modeling Unbalanced Classes
+3.6.2 Modeling Unbalanced Classes
+3.6.3 Practice Lab: Modeling Imbalanced Classes	Offline	CLO6	T	Slide, Videos of Modeling Unbalanced Classes	 	Read Slide and Watch Video	 
+45	Progress Test 3
+Review the mini capstone	Offline	CLO10	U	- Content 24 - 30 and 34 - 47.
+- Progress test 3
+- Student's capstone	 	- Review Content 24 - 30 and 34 - 47
+- Do Progress test 3
+-	 
+46	Review the mini capstone	Offline	CLO10	U	Student's capstone	 	Presentation	 
+47	4.1 Introduction to Unsupervised Learning and K Means
+4.1.1 Introduction to Unsupervised Learning
+4.1.2 K Means Clustering	Offline	CLO7, CLO8	T	Slide, Videos of Introduction to Unsupervised Learning, K Means Clustering	FLM and Coursera	Read Slide and Watch Video	 
+48	4.1 Introduction to Unsupervised Learning and K Means
+4.1.2 K Means Clustering
+4.1.3 K-Means Lab	Offline	CLO8	T	Slide, Videos of K Means Clustering	FLM and Coursera	Read Slide and Watch Video	 
+49	4.2 Selecting a clustering algorithm
+4.2.1 Distance Metrics of Clustering Algorithms
+4.2.2 Common clustering algorithms
+4.2.2.1 Hierarchical Agglomerative Clustering	Offline	CLO8, CLO9	T	Slide, Videos of Computational hurdles of clustering algorithms	FLM and Coursera	Read Slide and Watch Video	 
+50	4.2 Selecting a clustering algorithm
+
+4.2.2.2 DBSCAN (homework)
+4.2.2.3 Mean-shift (howework)
+4.2.2.4Hierarchical Agglomerative Clustering Lab	Offline	CLO8, CLO9	T	Slide , Videos of Common clustering algorithms	FLM and Coursera	Read Slide and Watch Video	 
+51	4.2 Selecting a clustering algorithm
+4.2.3 Compare clustering algorithms	Offline	CLO8, CLO9	T	Slide, Video of Compare clustering algorithms	FLM and Coursera	Read Slide and Watch Video	 
+52	4.2 Selecting a clustering algorithm
+4.2.3 Compare clustering algorithms
+Clustering Demo	Offline	CLO8, CLO9	T	Slide, Video of Compare clustering algorithms	FLM and Coursera	Read Slide and Watch Video	 
+53	4.3 Dimensionality Reduction
+4.3.1 Dimensionality Reduction	Offline	CLO8, CLO9	T	Slide, Videos of Dimensionality Reduction	FLM and Coursera	Read Slide and Watch Video	 
+54	4.3 Dimensionality Reduction
+4.3.2 Principal Component Analysis	Offline	CLO8, CLO9	T	Slide, Videos of Principal Component Analysis and Matrix Factorization	FLM and Coursera	Read Slide and Watch Video	 
+55	4.3 Dimensionality Reduction
+4.3.2 Matrix Factorization (homework)
+4.3.3 Principal Component Analysis Lab	Offline	CLO8, CLO9	T	Slide, Videos of Principal Component Analysis and Matrix Factorization	 	Read Slide and Watch Video	 
+56	Progress test 4
+Review mini Capstone	Offline	CLO10	U	- Content 50 - 58.
+- Progress test 4
+- Student's projects and ppt.	 	- Review Content 50 - 58.
+- Do Progress test 4
+-	 
+57	Review the mini Capstone	Offline	CLO10	U	Student's capstone and ppt.	 	Presentation	 
+58	Review the mini Capstone	Offline	CLO10	U	Student's capstone and ppt.	 	Presentation	 
+59	Review	Offline	 	U	All Slides	FLM and Coursera	Review Slide	 
+60	Review	Offline	 	U	All Slides	FLM and Coursera	Review Slide
