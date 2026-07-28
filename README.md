@@ -1,130 +1,149 @@
-# Movie Recommendation System
-## AIL303m - Machine Learning Minicapstone
+# MovieLens Recommendation Study — NMF Collaborative Filtering
 
-This repository is structured as a clean submission version with reproducible pipeline, report assets, and presentation slides.
+> **AIL303m team project at FPT University.** The repository name
+> `SVD-ail303m-g5project` is retained for course traceability, but the
+> implementation in this repository is **Non-negative Matrix Factorization
+> (NMF)**, not SVD.
 
-## Team Members
-* **Hải**: Data Exploratory & Visualization, Report Writing
-* **Minh**: Data Preprocessing & Validation 
-* **Đức**: Baseline Setup & Evaluation Metrics
-* **Chung**: Matrix Factorization Modeling (NMF)
-* **Dương**: Pipeline Integration
+The project compares a global-mean baseline with an NMF collaborative-filtering
+pipeline on MovieLens `ml-latest-small`, then evaluates both pointwise error and
+ranking behavior on a deterministic hold-out split.
 
-## 1. Motivation
-Streaming platforms face **information overload**: users struggle to pick relevant movies from very large catalogs.
-This project builds a recommendation workflow to improve personalization quality with measurable metrics.
+## Team attribution
 
-## 2. Problem Statement
-- Input: historical explicit ratings `(userId, movieId, rating)`.
-- Output:
-  - Predicted ratings for unseen user-item pairs.
-  - Top-N personalized movie recommendations.
-- Goal: outperform baseline using pointwise + ranking metrics.
+| Member | Documented role |
+|---|---|
+| Hải | Exploratory data analysis, visualization, report writing |
+| Minh | Data preprocessing, validation |
+| Đức | Baseline setup, evaluation metrics |
+| Chung | NMF matrix-factorization modeling |
+| Dương | Pipeline integration |
 
-## 3. Dataset
-Source: MovieLens `ml-latest-small` (`data/ml-latest-small/`)
-- Ratings: **100,836**
-- Users: **610**
-- Movies: **9,742**
-- Rating scale: **0.5 - 5.0**
-- Sparsity: **~98.3%**
+The metrics and final system are team outputs. Phạm Hoàng Hải's documented work
+does not imply individual ownership of the NMF model or the team's reported
+results.
 
-## 4. Method
-- Baseline: Global Mean prediction as evaluation reference.
-- Main implemented model: **NMF** (`sklearn.decomposition.NMF`) in `pipeline.py`.
-- NMF is chosen over SVD for its non-negativity constraint, which naturally fits the non-negative rating scale (0.5–5.0). See `reports/project_report.docx` Section 2.3 for full justification.
+## Pipeline
 
-## 5. Pipeline (Visual)
-![Pipeline Workflow](assets/figures/pipeline_workflow.png)
+```mermaid
+flowchart LR
+    A["MovieLens ratings"] --> B["Deterministic 80/20 rating split"]
+    B --> C["Global-mean baseline"]
+    B --> D["User-item matrix"]
+    D --> E["Fill missing entries with train global mean"]
+    E --> F["sklearn NMF (100 components)"]
+    C --> G["RMSE / MAE"]
+    F --> G
+    F --> H["Precision / Recall / F1 / NDCG / MRR @10"]
+    G --> I["JSON metrics artifact"]
+    H --> I
+```
 
-For detailed step-by-step I/O and controls, see: [`pipeline.md`](pipeline.md).
+Implementation: [`pipeline.py`](pipeline.py). Detailed I/O and controls:
+[`pipeline.md`](pipeline.md).
 
-## 6. Experimental Results
-Source of truth: `reports/pipeline_metrics.json`
+## Dataset and terms
 
-### 6.1 Pointwise Metrics (Baseline vs NMF)
-- Baseline RMSE/MAE: **1.0488 / 0.8316**
-- NMF RMSE/MAE: **1.0365 / 0.8212**
-- Improvement: **+1.18% RMSE**, **+1.25% MAE**
+The tracked dataset is GroupLens MovieLens `ml-latest-small`:
 
-![Baseline vs NMF](assets/figures/baseline_vs_nmf_rmse_mae.png)
+- 100,836 ratings from 610 anonymized users;
+- 9,742 movies;
+- explicit ratings from 0.5 to 5.0;
+- development dataset generated in 2018.
 
-### 6.2 Ranking Metrics @10 (NMF)
-- Precision@10: **0.6023**
-- Recall@10: **0.6447**
-- F1@10: **0.6228**
-- NDCG@10: **0.8056**
-- MRR@10: **0.8628**
+MovieLens retains its own research-use, attribution, redistribution and
+non-commercial conditions. Read the bundled
+[`data/ml-latest-small/README.txt`](data/ml-latest-small/README.txt) before
+reusing the data or results. This repository does not imply endorsement by the
+University of Minnesota or GroupLens.
 
-![Ranking Metrics](assets/figures/ranking_metrics_at10.png)
+## Reproduced results
 
-## 7. Data Visual Highlights
-### 7.1 Rating Distribution
-![Rating Distribution](assets/figures/rating_distribution.png)
+Tracked reference artifact:
+[`notebooks/pipeline_metrics.json`](notebooks/pipeline_metrics.json).
 
-### 7.2 Top 10 Most Rated Movies
-![Top Rated Count](assets/figures/top10_most_rated_movies.png)
+| Metric | Global mean | NMF |
+|---|---:|---:|
+| RMSE | 1.0488 | 1.0365 |
+| MAE | 0.8316 | 0.8212 |
 
-> These visuals are generated from the same dataset and metric artifacts used by the pipeline.
+| NMF ranking metric | Value |
+|---|---:|
+| Precision@10 | 0.6023 |
+| Recall@10 | 0.6447 |
+| F1@10 | 0.6228 |
+| NDCG@10 | 0.8056 |
+| MRR@10 | 0.8628 |
 
-## 8. Interpretation (Why gains are moderate)
-- Baseline on explicit ratings is already relatively strong.
-- Matrix is highly sparse (~98.3%).
-- Limited content/context features (e.g., cast/director/text) in current scope.
+The July 2026 reproduction matched dataset counts, parameters and all headline
+values. Raw floating-point values differed by at most `8.1e-12` under NumPy
+2.5.1, pandas 3.0.5 and scikit-learn 1.9.0, which is expected numerical drift
+and does not change the reported precision.
 
-## 9. Repository Structure
+![Baseline and NMF pointwise metrics](assets/figures/baseline_vs_nmf_rmse_mae.png)
+
+## Reproduce
+
+Python 3.12:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python pipeline.py
+```
+
+The command writes:
+
+- `models/nmf_pipeline.pkl` — ignored local model artifact;
+- `reports/pipeline_metrics.json` — regenerated metrics.
+
+Compare a regenerated file with the tracked reference while ignoring only
+`generated_at_utc` and allowing `1e-10` absolute tolerance for floating-point
+metrics.
+
+Optional recommendation output:
+
+```bash
+python pipeline.py \
+  --recommend-user 42 \
+  --recommendations-out /tmp/top_recommendations.csv
+```
+
+## Evaluation limits
+
+- The 80/20 split is random over rating rows, not temporal and not grouped by
+  user; it does not measure cold-start performance.
+- Ranking metrics are computed over each user's held-out rated items, not a
+  full-catalog candidate set with sampled negatives. They should not be read as
+  online recommendation quality.
+- Relevance is defined as rating `>= 3.5`; changing this threshold or `k`
+  changes the ranking metrics.
+- Missing train-matrix entries are filled with the global mean before NMF,
+  which creates a dense objective and is not the same as optimizing only
+  observed interactions.
+- The pointwise improvement over the global-mean baseline is modest
+  (approximately 1.18% RMSE and 1.25% MAE).
+- No temporal, fairness, diversity, novelty, coverage, or online A/B evaluation
+  is included.
+
+## Repository map
+
 ```text
-project/
-├── assets/
-│   ├── course_detail.txt
-│   └── figures/                         # README/report visuals
-├── data/ml-latest-small/
-├── notebooks/
-│   ├── 00_EDA.ipynb                          # Comprehensive Exploratory Data Analysis
-│   ├── 01_Baseline_Popularity.ipynb          # Popularity & Global Mean Baseline
-│   └── 02_NMF_Collaborative_Filtering.ipynb  # NMF Collaborative Filtering Model
-├── models/
-│   └── nmf_pipeline.pkl                 # Trained NMF model artifact
-├── reports/
-│   ├── project_report.docx              # Main submission report (scientific paper)
-│   ├── project-introduction.pptx        # Slide deck (introduction)
-│   ├── minicapstone.pptx                # Slide deck (minicapstone)
-│   └── pipeline_metrics.json            # Metric source of truth
-├── pipeline.py                          # End-to-end pipeline script
-├── pipeline.md                          # Pipeline documentation
-├── project.json
-├── requirements.txt
-└── README.md
+.
+├── assets/figures/                 # README/report figures
+├── data/ml-latest-small/           # MovieLens data + upstream terms
+├── notebooks/                      # EDA, baseline, NMF, reference metrics
+├── reports/                        # DOCX/PPTX course deliverables
+├── pipeline.py                     # deterministic training/evaluation entrypoint
+├── pipeline.md                     # pipeline contract and controls
+├── project.json                    # project summary
+└── requirements.txt
 ```
 
-## 10. Reproducibility
-### Install
-```bash
-pip install -r requirements.txt
-```
+Course deliverables:
 
-### Run pipeline
-```bash
-python3 pipeline.py
-```
-
-Pipeline artifacts:
-- `models/nmf_pipeline.pkl`
-- `reports/pipeline_metrics.json`
-
-Optional internal demo output (only when requested):
-```bash
-python3 pipeline.py --recommend-user 42 --recommendations-out /tmp/top_recommendations.csv
-```
-
-## 11. Submission Documents
-- Main Word report: `reports/project_report.docx`
-- Pipeline explanation: `pipeline.md`
-- Slides:
-  - `reports/project-introduction.pptx`
-  - `reports/minicapstone.pptx`
-
-## 12. Notes for Evaluation
-- Claims are tied to measurable metrics.
-- Baseline comparison is explicit.
-- Limitations and fallback directions are documented.
+- [`reports/project_report.docx`](reports/project_report.docx)
+- [`reports/project-introduction.pptx`](reports/project-introduction.pptx)
+- [`reports/presentation.pptx`](reports/presentation.pptx)
